@@ -25,7 +25,7 @@ function useLocalStorage(
     }
     prevKeyRef.current = key
     window.localStorage.setItem(key, deserialize(value))
-  }, [value, serialize, key])
+  }, [value, deserialize, key])
 
   return [value, setValue]
 }
